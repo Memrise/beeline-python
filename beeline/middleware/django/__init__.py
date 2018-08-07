@@ -56,7 +56,7 @@ class HoneyMiddlewareBase(object):
             "request.path": request.path,
             "request.remote_addr": request.META['REMOTE_ADDR'],
             "request.content_length": request.META.get('CONTENT_LENGTH', '0'),
-            "request.user_agent": request.META['HTTP_USER_AGENT'],
+            "request.user_agent": request.META.get('HTTP_USER_AGENT', ''),
             "request.scheme": request.scheme,
             "request.secure": request.is_secure(),
             "request.query": request.GET.dict(),
